@@ -1,0 +1,458 @@
+<!-- This is the HTML file which has the basic overall layout of your modern and minimalistic portfolio.
+Throughout this file, there will find a variety of tags, attributes, and classes to make the website functional. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <!-- metadata: data about the html document. THIS IS NOT DISPLAYED-->
+  <head>
+    <!-- meta tags providing information about the document -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- links to css files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" href= "./assets/icon.png" type="image/x-icon"> 
+  </head>
+
+  <!-- main body of the webpage -->
+  <body>
+    <!-- navigation bar for desktop webpage -->
+    <nav id="desktop-nav">
+      <!-- logo and nav links -->
+      <div class="logo">Adam Wang</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- navigation bar for mobile webpage -->
+    <nav id="hamburger-nav">
+      <!-- logo and nav links -->
+      <div class="logo">Adam Wang</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()"> 
+          <!-- create three horizontal lines to look like a hamburger -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- links to different section of the page -->
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section id="profile">
+      <!-- Pfp and introductory information -->
+      <div class="section__pic-container">
+        <img src="./assets/pfp.png" alt="Adam Wang profile picture" />
+      </div>
+      <div class="section__text">
+        <!-- Title, description, and buttons for downloading CV and contact -->
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Adam Wang</h1>
+        <p class="section__text__p2">Highschool Student</p>
+        <div class="btn-container">
+          <!-- Button with an "onclick" attribute which opens the resume.pdf in assets -->
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <!-- Button with an "onclick" attribute which moves the screen down to "Contact Me" section -->
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <!-- Social media icons with links to LinkedIn and GitHub profiles -->
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/adamyzwang/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/YeIIcw'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- about me section -->
+    <section id="about">
+      <!-- Title and introductory text about you -->
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <!-- Profile picture for the About Me section -->
+        <div class="section__pic-container">
+          <img
+            src="./assets/side-pfp.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <!-- Details about experience and education -->
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>17+ years <br />Surviving Life</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Markville Secondary School</p>
+            </div>
+          </div>
+          <!-- Personal introduction and description -->
+          <div class="text-container">
+            <p>
+              Hello there! I'm [Your Name], a high school student with a passion for learning, creativity, and making the most out of life. 
+              Welcome to my corner of the internet, where I'll take you on a journey through my interests, achievements, and the things that make me who I am.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow icon to scroll to the Experience section -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
+    </section>
+
+    <!-- experience section -->
+    <section id="experience">
+      <!-- Title and details about experience, could be anything you want -->
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Experience section which contains two sections: left section and right section -->
+          <!-- Left section containing frontend development programming languages -->
+          <div class="details-container">
+            <!-- Subheading -->
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <!-- Each article container holds a checkmark image, title, and skill level -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- Right section containing even more frontend development programming languages -->
+          <div class="details-container">
+            <!-- Subheading -->
+            <h2 class="experience-sub-title">Frontend Development</h2> 
+            <div class="article-container">
+              <!-- Each article container holds a checkmark image, title, and skill level -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow icon to scroll to the Projects section -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
+    </section>
+
+    <!-- projects section -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <!-- list of projects -->
+        <div class="about-containers">
+          <!-- Div section with class name "details-container" and "color-container" which holds individual sections with an image, title, and two buttons -->
+          <div class="details-container color-container">
+            <!-- Image container -->
+            <div class="article-container">
+              <img
+                src="./assets/JavaGame.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <!-- Title of section -->
+            <h2 class="experience-sub-title project-title">Reclaim The Throne: The Prince Journey</h2>
+            <!-- Two buttons, each which have an "onclick" property to redirect the user -->
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw/Reclaiming_the_Throne_The_Prince_Journey'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw/Reclaiming_the_Throne_The_Prince_Journey'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/BreathEasy.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Air Quality Detector</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw/yrhacks2023'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw/yrhacks2023'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/SignLinguo.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">SignLinguo</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Fairshare.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Fairshare</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw/FairShare'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/YeIIcw/FairShare'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Arrow icon to scroll to the Contact section -->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
+    </section>
+
+    <!-- contact section -->
+    <section id="contact">
+      <!-- Title and description of the Contact section -->
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <!-- Section that holds each contact information -->
+      <div class="contact-info-upper-container">
+        <!-- Container that includes an image, and link for user to contact at -->
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:contact@adamwang.io">contact@adamwang.io</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/adamyzwang/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <!-- Navigation links in the footer for easy access to different sections of the webpage -->
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
