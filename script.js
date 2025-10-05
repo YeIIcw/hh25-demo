@@ -7,3 +7,8 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
+
+// Addition function to sum numbers
+function add(...numbers) {
+  return numbers.reduce((sum, num) => sum + num, 0);
+}
